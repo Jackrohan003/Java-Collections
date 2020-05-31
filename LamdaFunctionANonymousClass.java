@@ -24,7 +24,15 @@ class Main {
             return o1.marks - o2.marks;
         else
             return o1.name.compareTo(o2.name);
-      } );    
+      } );  
+  
+    //If we want to sort only name or only marks then below syntax is useful
+    
+     Collections.sort(studentlist,(o1,o2)-> o2.name.compareTo(o1.name)); // Descending Order 
+
+        Collections.sort(studentlist,(o1,o2)-> o2.marks - o1.marks); // Marks Base
+    
+    
     studentlist.forEach(System.out::println);
 
   }
